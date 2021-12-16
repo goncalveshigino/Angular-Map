@@ -1,1 +1,40 @@
-<p>propriedades works!</p>
+
+
+<div class="row mt-3">
+    <div class="col-2"></div>
+        <div class="col">
+             <h1>Lista de Propriedades</h1>
+             <hr>
+        </div>
+</div> 
+
+
+  <div class="row container">
+
+    <div class="col-2"></div>
+
+        <div class="col">
+
+            <div class="row">
+
+               <div class="col-4 mb-2"
+                    *ngFor="let propriedade of propriedades">
+
+                 <div class="card">
+
+                    <app-mini-mapa [lngLat]="propriedade.lngLat" class="card-img-top"></app-mini-mapa>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ propriedade.titulo }}</h5>
+                        <p class="card-text">{{ propriedade.descripcion }}</p>
+                    </div>
+
+                </div>
+
+               </div>
+
+            </div>
+        </div>
+</div>
+
+
+
